@@ -1,0 +1,5 @@
+#!/bin/bash
+
+arm-linux-gnueabi-gcc -c -marm "$1.s"
+arm-linux-gnueabi-ar rsc "$1.a" "$1.o"
+arm-linux-gnueabi-gcc "$1.c" "$1.a" -o "$1"
